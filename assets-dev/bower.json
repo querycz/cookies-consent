@@ -1,8 +1,0 @@
-{
-	"name": "CookiesInfo",
-	"version": "0.0.1",
-	"author": "Jiří Šebek (www.query.cz)",
-	"dependencies": {
-		"jquery": "1.11.3"
-	}
-}
