@@ -1,0 +1,10 @@
+{
+	"name": "Cookies-info",
+	"version": "1.0.0",
+	"author": "Jiří Šebek, Tomáš Syrový (www.query.cz)",
+	"ignore": [
+	    ".jshintrc",
+	    "**/*.txt",
+	    "*.sublime-project"
+	  ]
+}
