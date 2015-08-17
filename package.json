@@ -2,8 +2,6 @@
 	"name": "CookiesInfo",
 	"version": "0.0.1",
 	"dependencies": {
-		"grunt-contrib-concat": "latest",
-		"grunt-contrib-uglify": "latest",
 		"grunt-contrib-less": "0.12.0",
 		"grunt-autoprefixer": "latest",
 		"grunt-bowercopy": "latest",
