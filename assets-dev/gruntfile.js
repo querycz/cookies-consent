@@ -12,6 +12,10 @@ module.exports = function(grunt) {
 				src: [
 
 
+				// Cookies info
+				'js/cookies-info.js',
+
+
 				// Main.js
 				'js/main.js'
 
