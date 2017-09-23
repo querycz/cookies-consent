@@ -1,11 +1,10 @@
 {
-	"name": "CookiesInfo",
-	"version": "0.0.1",
+	"name": "cookies-info",
+	"version": "2.0.0",
 	"dependencies": {
-		"grunt-contrib-less": "0.12.0",
-		"grunt-autoprefixer": "latest",
-		"grunt-bowercopy": "latest",
-		"grunt-notify": "latest",
-		"grunt-contrib-watch": "latest"
+		"gulp" : "latest",
+		"gulp-sass": "latest",
+		"gulp-rename": "latest",
+		"jquery": "latest"
 	}
 }
