@@ -7,6 +7,21 @@
 
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=XXXXXXXX"></script>
+		<script>
+			function addAnalytics() {
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'XXXXXXXX');
+			}
+
+			if (document.cookie.indexOf("cookies_info=1") > -1) {
+				addAnalytics();
+			}
+		</script>
 	</head>
 
 	<body>
@@ -14,7 +29,7 @@
 
 		<!-- Cookies Info -->
 		<div class="cookies-info">
-			Vážený uživateli, tento web používá k analýze návštěvnosti soubory cookie. Používáním tohoto webu s jejich použitím souhlasíte. <a title="Více informací o cookies" href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm" target="_blank">Více informací o cookies</a>
+			Vážený uživateli, tento web používá k analýze návštěvnosti soubory cookie. <a title="Více informací o cookies" href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm" target="_blank">Více informací o cookies</a>
 
 			<button class="button">Souhlasím</button>
 		</div> <!-- .cookies-info -->
@@ -38,6 +53,7 @@
 				$('.cookies-info button').click(function() {
 					createCookie("cookies_info", "1", 30);
 					$('.cookies-info').slideUp();
+					addAnalytics();
 				});
 
 			});
