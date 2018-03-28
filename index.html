@@ -9,17 +9,22 @@
 
 		<!-- Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=XXXXXXXX"></script>
+
+		<!-- Cookies Scripts Loader  -->
 		<script>
-			function addAnalytics() {
+			function loadScripts() {
+
+				// Google Analytics
 				window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
-
 				gtag('config', 'XXXXXXXX');
+
+				// Another Script
 			}
 
 			if (document.cookie.indexOf("cookies_info=1") > -1) {
-				addAnalytics();
+				loadScripts();
 			}
 		</script>
 	</head>
@@ -53,7 +58,7 @@
 				$('.cookies-info button').click(function() {
 					createCookie("cookies_info", "1", 30);
 					$('.cookies-info').slideUp();
-					addAnalytics();
+					loadScripts();
 				});
 
 			});
