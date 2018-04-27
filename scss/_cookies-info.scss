@@ -14,24 +14,20 @@
 	z-index: 1000;
     text-align: center;
 	display: none;
+}
 
-	.row {
-		margin: 0;
-	}
+.cookies-info-button {
+	background: red;
+	border: 0;
+	color: #fff;
+	border-radius: 5px;
+	margin-left: 20px;
+	padding: 5px 20px;
+	font: inherit;
+	cursor: pointer;
+}
 
-	button {
-		background: red;
-		border: 0;
-		color: #fff;
-		border-radius: 5px;
-		margin-left: 20px;
-        padding: 5px 20px;
-        font: inherit;
-        cursor: pointer;
-	}
-
-	a {
-		color: red;
-		text-decoration: none;
-	}
+.cookies-info-link {
+	color: red;
+	text-decoration: none;
 }
