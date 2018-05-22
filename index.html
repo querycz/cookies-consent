@@ -20,10 +20,10 @@
 				gtag('js', new Date());
 				gtag('config', 'XXXXXXXX');
 
-				// Another Script
+				// Another Cookies Sensitive Script
 			}
 
-			if (document.cookie.indexOf("cookies_info=1") > -1) {
+			if (document.cookie.indexOf("cookies_info=agree") > -1) {
 				loadScripts();
 			}
 		</script>
@@ -36,8 +36,8 @@
 		<div class="cookies-info">
 			Vážený uživateli, tento web používá ke své funkčnosti a analýze návštěvnosti soubory cookie. <a class="cookies-info-link" title="Více informací o cookies" href="http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm" target="_blank">Více informací o cookies</a>
 
-			<button class="button cookies-info-button">Souhlasím</button>
-		</div> <!-- .cookies-info -->
+			<button class="button cookies-info-button cookies-info-button-agree">Souhlasím</button> <button class="button cookies-info-button cookies-info-button-disagree">Nesouhlasím</button>
+		</div> <!-- /.cookies-info -->
 
 
 
@@ -51,14 +51,19 @@
 				/**
 				 * Cookies Info
 				 */
-				if (readCookie("cookies_info") != "1"){
+				if ((readCookie("cookies_info") != "agree") && (readCookie("cookies_info") != "disagree")) {
 					$('.cookies-info').delay(1000).slideDown(500);
 				}
 
-				$('.cookies-info-button').click(function() {
-					createCookie("cookies_info", "1", 30);
+				$('.cookies-info-button-agree').click(function() {
+					createCookie("cookies_info", "agree", 30);
 					$('.cookies-info').slideUp();
 					loadScripts();
+				});
+
+				$('.cookies-info-button-disagree').click(function() {
+					createCookie("cookies_info", "disagree", 15);
+					$('.cookies-info').slideUp();
 				});
 
 			});
