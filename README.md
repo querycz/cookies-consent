@@ -1,3 +1,3 @@
 # Cookies-Info
 
-Just a basic cookies info bar.
+Just a basic cookies info bar
