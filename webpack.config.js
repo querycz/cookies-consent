@@ -7,7 +7,7 @@ module.exports = {
 	cache: { type: 'filesystem' },
 	optimization: { minimizer: [new TerserPlugin({ extractComments: false })] },
 	entry: {
-		'cookies-info.min': ['./src/scss/cookies-info.scss', './src/js/cookies-info.js']
+		'cookies-consent.min': ['./src/scss/cookies-consent.scss', './src/js/cookies-consent.js']
 	},
 	output: {
 		libraryTarget: 'umd',

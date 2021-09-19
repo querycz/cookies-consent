@@ -1,5 +1,6 @@
-.cookies-info {
+.cookies-consent {
 	position: fixed;
+	right: 0;
 	bottom: 0;
 	z-index: 1000;
 	box-sizing: border-box;
@@ -11,7 +12,7 @@
 	background: #333;
 }
 
-.cookies-info-button {
+.cookies-consent-button {
 	padding: 5px 20px;
 	margin-left: 20px;
 	color: #fff;
@@ -26,7 +27,7 @@
 	}
 }
 
-.cookies-info-link {
+.cookies-consent-link {
 	color: red;
 	text-decoration: none;
 }

@@ -27,23 +27,23 @@ function eraseCookie(name) {
 // Usage
 jQuery(function() {
 
-	if ((readCookie("cookies_info") != "agree") && (readCookie("cookies_info") != "disagree")) {
-		$('.cookies-info').delay(1000).slideDown(500);
+	if ((readCookie("cookies_consent") != "agree") && (readCookie("cookies_consent") != "disagree")) {
+		$('.cookies-consent').delay(1000).slideDown(500);
 	}
 
-	$('.cookies-info-button.is-agree').click(function() {
-		createCookie("cookies_info", "agree", 30);
-		$('.cookies-info').slideUp();
+	$('.cookies-consent-button.is-agree').click(function() {
+		createCookie("cookies_consent", "agree", 30);
+		$('.cookies-consent').slideUp();
 		loadScripts();
 	});
 
-	$('.cookies-info-button.is-disagree').click(function() {
-		createCookie("cookies_info", "disagree", 15);
-		$('.cookies-info').slideUp();
+	$('.cookies-consent-button.is-disagree').click(function() {
+		createCookie("cookies_consent", "disagree", 15);
+		$('.cookies-consent').slideUp();
 	});
 
 });
 
-if (document.cookie.indexOf("cookies_info=agree") > -1) {
+if (document.cookie.indexOf("cookies_consent=agree") > -1) {
 	loadScripts();
 }
