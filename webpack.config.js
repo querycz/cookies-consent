@@ -11,7 +11,7 @@ module.exports = {
 	},
 	output: {
 		libraryTarget: 'umd',
-		path: __dirname + '/build',
+		path: __dirname + '/dist',
 		filename: '[name].js?[contenthash]',
 		publicPath: '',
 		clean: true,

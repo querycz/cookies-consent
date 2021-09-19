@@ -31,13 +31,13 @@ jQuery(function() {
 		$('.cookies-info').delay(1000).slideDown(500);
 	}
 
-	$('.cookies-info-button-agree').click(function() {
+	$('.cookies-info-button.is-agree').click(function() {
 		createCookie("cookies_info", "agree", 30);
 		$('.cookies-info').slideUp();
 		loadScripts();
 	});
 
-	$('.cookies-info-button-disagree').click(function() {
+	$('.cookies-info-button.is-disagree').click(function() {
 		createCookie("cookies_info", "disagree", 15);
 		$('.cookies-info').slideUp();
 	});

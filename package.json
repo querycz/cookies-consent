@@ -1,8 +1,9 @@
 {
  "name": "cookies-info",
  "version": "5.0.0",
+ "main": "./dist/cookies-info.min.js",
+ "homepage": "https://github.com/querycz/cookies-info",
  "dependencies": {
-  "@babel/register": "^7.15.3",
   "jquery": "latest"
  },
  "devDependencies": {
