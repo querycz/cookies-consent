@@ -45,5 +45,5 @@ jQuery(function() {
 });
 
 if (document.cookie.indexOf("cookies_consent=agree") > -1) {
-	loadScripts();
+	loadCookiesScripts();
 }
