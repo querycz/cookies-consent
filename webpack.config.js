@@ -43,7 +43,6 @@ module.exports = {
 		]
 	},
 	plugins: [
-		// new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: '[name].css?[contenthash]'
 		}),

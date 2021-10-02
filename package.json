@@ -1,6 +1,6 @@
 {
  "name": "cookies-info",
- "version": "5.2.0",
+ "version": "5.2.1",
  "main": "./dist/cookies-info.min.js",
  "homepage": "https://github.com/querycz/cookies-info",
  "dependencies": {
@@ -8,7 +8,6 @@
  },
  "devDependencies": {
   "autoprefixer": "^10.2.5",
-  "clean-webpack-plugin": "^3.0.0",
   "css-loader": "^5.2.0",
   "file-loader": "^6.2.0",
   "lodash.template": ">=4.5.0",
