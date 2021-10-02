@@ -34,7 +34,7 @@ jQuery(function() {
 	$('.cookies-consent-button.is-agree').click(function() {
 		createCookie("cookies_consent", "agree", 30);
 		$('.cookies-consent').slideUp();
-		loadScripts();
+		loadCookiesScript();
 	});
 
 	$('.cookies-consent-button.is-disagree').click(function() {
