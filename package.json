@@ -1,6 +1,6 @@
 {
  "name": "cookies-consent",
- "version": "5.4.2",
+ "version": "5.5.0",
  "main": "./dist/cookies-consent.min.js",
  "homepage": "https://github.com/querycz/cookies-consent",
  "dependencies": {
