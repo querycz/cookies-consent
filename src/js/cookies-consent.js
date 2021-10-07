@@ -1,47 +1,56 @@
 // Functions
 function createCookie(name, value, days) {
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-		var expires = "; expires=" + date.toGMTString();
-	}
-	else var expires = "";
-	document.cookie = name + "=" + value + expires + "; path=/";
+    let expires;
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    } else {
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
 }
 
 function readCookie(name) {
-	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for (var i = 0; i < ca.length; i++) {
-		var c = ca[i];
-		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-	}
-	return null;
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
 }
 
 function eraseCookie(name) {
-	createCookie(name, "", -1);
+    createCookie(name, "", -1);
 }
 
-// Usage
-jQuery(function() {
+let ready = (callback) => {
+    if (document.readyState !== "loading") {
+        callback();
+    } else {
+        document.addEventListener("DOMContentLoaded", callback);
+    }
+}
 
-	if ((readCookie("cookies_consent") != "agree") && (readCookie("cookies_consent") != "disagree")) {
-		$('.cookies-consent').delay(1000).slideDown(500);
-	}
+ready(() => {
+    if ((readCookie("cookies_consent") !== "agree") && (readCookie("cookies_consent") !== "disagree")) {
+        setTimeout(() => {
+            document.querySelector('.cookies-consent').classList.add('visible');
+        }, 1000);
+    }
 
-	$('.cookies-consent-button.is-agree').click(function() {
-		createCookie("cookies_consent", "agree", 30);
-		$('.cookies-consent').slideUp();
-		loadCookiesScript();
-	});
+    document.querySelector(".cookies-consent-button.is-agree").addEventListener("click", (e) => {
+        createCookie("cookies_consent", "agree", 30);
+        document.querySelector('.cookies-consent').classList.remove('visible');
+        loadCookiesScript();
+    });
 
-	$('.cookies-consent-button.is-disagree').click(function() {
-		createCookie("cookies_consent", "disagree", 15);
-		$('.cookies-consent').slideUp();
-	});
-
+    document.querySelector(".cookies-consent-button.is-disagree").addEventListener("click", (e) => {
+        createCookie("cookies_consent", "disagree", 30);
+        document.querySelector('.cookies-consent').classList.remove('visible');
+    });
 });
 
 if (document.cookie.indexOf("cookies_consent=agree") > -1) {
